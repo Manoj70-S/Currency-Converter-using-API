@@ -21,9 +21,3 @@ A modern and interactive **Currency Converter** web app that provides real-time 
 - **CSS** – Styling (3D animations, glass effect)
 - **JavaScript** – Logic, DOM manipulation, Fetch API
 - **Currency API** – Real-time exchange rates
-
----
-
-## 📸 Screenshots
-
-(Add your project screenshots here)
