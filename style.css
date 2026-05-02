@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1d2671, #c33764);
+  perspective: 1000px;
+}
+
+/* 3D container */
+.container {
+  width: 370px;
+  padding: 2rem;
+  border-radius: 20px;
+  color: #fff;
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease;
+}
+
+/* Tilt effect */
+.container:hover {
+  transform: rotateX(8deg) rotateY(-8deg) scale(1.03);
+}
+
+.container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* floating animation */
+.container {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
+}
+
+.amount input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+}
+
+/* dropdown layout */
+.dropdown {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+
+.select-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+  border-radius: 12px;
+
+  background: rgba(255,255,255,0.15);
+  transition: 0.3s;
+}
+
+.select-container:hover {
+  transform: translateZ(10px);
+  background: rgba(255,255,255,0.25);
+}
+
+.select-container img {
+  width: 30px;
+}
+
+.select-container select {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+select option {
+  color: #000;
+}
+
+/* swap icon */
+.dropdown i {
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.dropdown i:hover {
+  transform: rotate(180deg) scale(1.2);
+}
+
+/* message */
+.msg {
+  text-align: center;
+  margin: 1rem 0;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* 3D glowing button */
+button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+
+  background: linear-gradient(135deg, #ff512f, #dd2476);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+
+  box-shadow: 0 5px 15px rgba(255, 0, 100, 0.5);
+
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(255, 0, 100, 0.8);
+}
+
+/* text labels */
+p {
+  font-size: 0.85rem;
+  margin-bottom: 4px;
+  opacity: 0.85;
+}
